@@ -1,0 +1,7 @@
+@import '../admin-main/admin-main.component.css';
+
+.profile input{
+  color: var(--main_color);
+  border: 1px solid var(--main_color);
+  outline: none;
+}

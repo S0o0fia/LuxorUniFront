@@ -1,0 +1,142 @@
+.news{
+  padding: 40px 0;
+}
+
+.new{
+  padding: 40px 0;
+}
+
+.new h3,.media h3,.contact h3 {
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.new h3 span{
+  color: var(--main_color);
+}
+
+.new h3 .bord-bot{
+  position: absolute;
+  top: 45px;
+  right: 15px;
+  width: 100px;
+  height: 2px;
+  background-color: var(--main_color);
+  z-index: 9;
+}
+
+.new .card {
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.new .card .titleOfEvent{
+color: var(--main_color);
+}
+
+.new .card:hover {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-box-shadow: 3px 5px 17px #acacac, -3px -5px 17px #acacac;
+  -moz-box-shadow: 3px 5px 17px #acacac, -3px -5px 17px #acacac;
+  -o-box-shadow: 3px 5px 17px #acacac, -3px -5px 17px #acacac;
+  box-shadow: 3px 5px 17px #acacac, -3px -5px 17px #acacac;
+  margin-top: -20px;
+}
+
+.new .card:hover .images .overlay {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.new .card .images {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+.card
+{
+  height: 350px;
+}
+.new .card .images .card-img-top{
+width: 100%;
+height: 100%;
+}
+
+.new .card .images:hover .card-img-top{
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+.new .card .card-body a{
+  color: var(--main_color);
+}
+
+.new .card .card-body .card-title {
+  padding: 5px;
+  font-size: 14px;
+  color: var(--main_color);
+}
+
+.new .card .card-body .card-text {
+  color: #000;
+}
+
+.new a:hover {
+  background-color: var(--second_color);
+  color: #FFF;
+}
+
+.news{
+  padding: 50px 0;
+}
+
+.page-item{
+  display: inline-block;
+}
+
+.pagination li{
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  background-color: transparent;
+}
+
+.pagination li:hover{
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+.pagination li a{
+  box-shadow: none;
+  color: var(--main_color);
+}
+
+.pagination li a:hover{
+  background-color: var(--main_color);
+  color: #FFF;
+}

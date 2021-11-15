@@ -1,0 +1,5 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+.system-message .contain-message ol li a{
+    color: #3f51b5;
+}

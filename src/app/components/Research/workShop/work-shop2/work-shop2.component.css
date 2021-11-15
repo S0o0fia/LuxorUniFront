@@ -1,0 +1,7 @@
+@import "../../../../../assets/CSS/about/info-css/fixed.css";
+
+@media (max-width: 576px) { 
+    .system-message .message-title h2::after{
+        top: 70px;
+    }
+}

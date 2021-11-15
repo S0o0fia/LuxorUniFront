@@ -1,0 +1,14 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+ ol{
+  margin-right: 25px;
+}
+
+ ol li{
+  margin: 15px 0;
+}
+
+p
+{
+  line-height:2;
+}

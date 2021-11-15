@@ -1,0 +1,13 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message ul{
+    list-style: none;
+    
+}
+.contain-message ul li{
+    margin-bottom: 8px;
+}
+.contain-message ul li a{
+    color: #3f51b5;
+    text-decoration: none;
+}

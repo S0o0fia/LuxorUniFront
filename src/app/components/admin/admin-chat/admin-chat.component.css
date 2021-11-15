@@ -1,0 +1,178 @@
+@import "../../student/chat/chat.component.css";
+
+:host {
+  --space_right: 6%;
+}
+
+.profile {
+  margin-right: 20px;
+}
+
+.profile .chating {
+  overflow-y: scroll;
+  height: 500px;
+  overflow-x: hidden;
+  border: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.profile .inforamtion {
+  width: 50%;
+  margin: 0 20px;
+}
+
+.profile .inforamtion.right {
+  float: right;
+}
+
+.profile .inforamtion.left {
+  float: left;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 20px;
+}
+
+.profile .inforamtion .photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.profile .inforamtion.left .photo {
+  margin: 5px 5% 0 2%;
+  float: left;
+}
+
+.profile .inforamtion .photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile .inforamtion .message {
+  background-color: #f6f7fb;
+  padding: 13px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  width: 80%;
+  display: inline-block;
+  margin-right: var(--space_right);
+  position: relative;
+  margin-top: 8px;
+}
+
+.profile .inforamtion .picture {
+  padding: 13px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 80%;
+  height: 250px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.profile .inforamtion .picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile .inforamtion.left .message {
+  width: 75%;
+  text-align: right;
+  direction: ltr;
+  background-color: #2d84fe;
+  color: #fff;
+  margin-left: var(--space_right);
+  margin-right: initial;
+}
+
+.profile .inforamtion .message::before {
+  position: absolute;
+  content: "";
+  right: -30px;
+  top: 10px;
+  border: 15px solid transparent;
+  border-left-color: #f6f7fb;
+  transform: translate(0, -10%);
+  -webkit-transform: translate(0, -10%);
+  -moz-transform: translate(0, -10%);
+  -ms-transform: translate(0, -10%);
+  -o-transform: translate(0, -10%);
+}
+
+.profile .inforamtion.left .message::before {
+  left: -30px;
+  right: initial;
+  border-left-color: transparent;
+  border-right-color: #2d84fe;
+}
+
+.profile .inforamtion .time {
+  padding: 5px;
+  color: #646464;
+  margin-right: var(--space_right);
+}
+
+.profile .inforamtion.left .time {
+  padding: 5px;
+  color: #646464;
+  margin-right: initial;
+  margin-right: var(--space_right);
+  font-size: 11px;
+}
+
+.profile .inforamtion.left .time {
+  padding: 5px;
+  color: #646464;
+  margin-right: initial;
+  margin-left: var(--space_right);
+}
+
+.send {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.send .mass {
+  margin-bottom: 10px;
+}
+
+.send .mass input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  padding: 5px 10px;
+  border: none;
+  color: var(--main_color);
+}
+
+.send .send_message button {
+  box-shadow: none;
+  margin: 0 10px;
+  background-color: var(--main_color);
+  border: none;
+  color: #fff;
+  padding: 7px 20px;
+}
+
+.send .send_message input {
+  float: left;
+  margin-top: 5px;
+}

@@ -1,0 +1,9 @@
+@import "../../../../../assets/CSS/about/info-css/fixed.css";
+
+.system-message .contain-message ol{
+    margin-right: 25px;
+}
+
+.system-message .contain-message ol li{
+    margin: 15px 0;
+}

@@ -1,0 +1,32 @@
+@import "../../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message .h6{
+    margin: 18px 0;
+}
+
+.contain-message p{
+    margin: 8px 0;
+}
+
+.contain-message ol{
+    margin-right: 20px ;
+}
+
+.contain-message ol li{
+    margin: 10px 0;
+}
+@media (max-width: 1200px) { 
+    .system-message .message-title h2::after{
+        top: 70px;
+    }
+}
+@media (max-width: 767px) { 
+    .system-message .message-title h2::after{
+        top: 90px;
+    }
+}
+@media (max-width: 376px) { 
+    .system-message .message-title h2::after{
+        top: 120px;
+    }
+}

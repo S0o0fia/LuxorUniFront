@@ -1,0 +1,59 @@
+/* start style section scroll to top*/
+
+.scroll_top{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: 1px solid var(--main_color);
+    z-index: 9;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    -webkit-transition: 0.4S all ease-in-out;
+    -moz-transition: 0.4S all ease-in-out;
+    -o-transition: 0.4S all ease-in-out;
+    transition:  0.4S all ease-in-out;
+    -webkit-animation: scrolling .5s ease-in-out;
+    -moz-animation: scrolling .5s ease-in-out;
+    -o-animation: scrolling .5s ease-in-out;
+    animation: scrolling .5s ease-in-out;
+    display: none;
+}
+
+@keyframes scrolling{
+    0%{
+        -webkit-transform: translateX(60px);
+        -moz-transform: translateX(60px);
+        -ms-transform: translateX(60px);
+        -o-transform: translateX(60px);
+        transform: translateX(60px);
+    }
+    100%{
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.scroll_top:hover{
+    background-color: var(--second_color);
+}
+
+.scroll_top:hover .icons{
+    color: #FFF;
+}
+
+.scroll_top .icons{
+    color: var(--second_color);
+}
+
+/* start style section scroll to top*/
+

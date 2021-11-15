@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="main">
+        <div class="profile">
+            <div class="card w-75">
+                <div class="card-body width-more">
+                    <h5 class="card-title">طلبات قيد المارجعة</h5>
+                    <span>{{lengthOfRequrestStatusOne}}</span>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a routerLink="/admin/admin-request-review" class="btn btn-primary">عرض</a>
+                </div>
+            </div>
+            <div class="card w-75">
+                <div class="card-body width-more">
+                    <h5 class="card-title">طلبات جارية</h5>
+                    <span>{{lengthOfRequrestStatustwo}}</span>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a routerLink="/admin/admin-requests-progress" class="btn btn-primary">عرض</a>
+                </div>
+            </div>
+            <div class="card w-75">
+                <div class="card-body width-more">
+                    <h5 class="card-title">طلبات منتهية</h5>
+                    <span>{{lengthOfRequrestStatusthree}}</span>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a routerLink="/admin/admin-completed-request" class="btn btn-primary">عرض</a>
+                </div>
+            </div>
+        </div>
+
+        <app-role></app-role>
+
+    </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

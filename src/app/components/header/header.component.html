@@ -1,0 +1,396 @@
+<!-- start section header -->
+
+<header>
+  <!-- start section header and navbar top -->
+  <div class="navbar-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="social_media">
+            <ul>
+              <li>
+                <a href="https://www.linkedin.com/" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/" target="_blank">
+                  <i class="fab fa-pinterest"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="row lang">
+            <div class="col-sm-6">
+              <div class="search">
+                <input type="search" />
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="ar">
+                <a class="toggle" href="javascript:void(0)">AR</a>
+                <i class="toggle fas fa-angle-down"></i>
+              </div>
+              <div class="en">
+                <a href="javascript:void(0)">EN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end section header and navbar top -->
+
+  <div class="clear"></div>
+
+  <!-- start section header and navbar -->
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="main_menu">
+        <div class="row">
+          <div class="md-2">
+            <div class="image">
+              <a routerLink="/">
+                <img
+                  src="assets/photo/logo.png"
+                  alt="جامعة الاقصر"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="md-8">
+            <!-- start section navbar menu -->
+
+            <div class="super_menu" id="super_menu" [class.show]="showing">
+              <ul>
+                <li>
+                  <a routerLink="/">الرئيسية</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">عن الجامعة</a>
+                  <i class="fas fa-angle-down fa-xs i"></i>
+
+                  <!-- start section navbar menu and sup_menu -->
+
+                  <div class="sup_menu">
+                    <ul class="unorder_sup_menu">
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fa fa-history i_first"></i>
+                          <a href="javascript:void(0);">تاريخ وحقائق</a>
+                        </div>
+                        <i class="fas fa-chevron-left fa-xs i"></i>
+                        <div class="order">
+                          <ul class="order_sup_menu" style="list-style: none">
+                            <li>
+                              <div class="child">
+                                <i class="fa fa-file i_thecond"></i>
+                                <a
+                                  routerLink="/about/info/university-president"
+                                >
+                                  كلمة رئيس الجامعة</a
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="child">
+                                <i class="fa fa-history i_thecond"></i>
+                                <a routerLink="/about/info/history">
+                                  تاريخ الجامعة</a
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="child">
+                                <i class="fa fa-id-card i_thecond"></i>
+                                <a routerLink="/about/info/facts">
+                                  حقائق وأرقام</a
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="child">
+                                <i class="fa fa-eye i_thecond"></i>
+                                <a routerLink="/about/info/university-vision">
+                                  رؤية الجامعة</a
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="child">
+                                <i class="fa fa-tasks i_thecond"></i>
+                                <a routerLink="/about/info/university-message">
+                                  رسالة الجامعة</a
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="child">
+                                <i class="fa fa-check i_thecond"></i>
+                                <a routerLink="/about/info/university-goals">
+                                  أهداف الجامعة</a
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="child">
+                                <i class="fa fa-globe i_thecond"></i>
+                                <a routerLink="/about/info/university-ranking">
+                                  ترتيب الجامعة بين جامعات العالم</a
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fa fa-handshake i_first"></i>
+                          <a routerLink="/about/conferences">المؤتمرات </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fa fa-envelope-open i_first"></i>
+                          <a routerLink="/about/connect">بيانات الاتصال</a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fa fa-envelope-open i_first"></i>
+                          <a routerLink="/about/ask-university-president"
+                            >اسأل رئيس الجامعة</a
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fas fa-phone i_first"></i>
+                          <a routerLink="/about/contact">تواصل معنـــا</a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fa fa-user i_first"></i>
+                          <a routerLink="/about/privacy-policy"
+                            >سياسةالخصوصية</a
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fa fa-sitemap i_first"></i>
+                          <a routerLink="/about/site-map">دليل الموقع</a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fa fa-virus i_first"></i>
+                          <a routerLink="/about/facing-corona">
+                            مواجهة كورونا</a
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- end section navbar menu and sup_menu -->
+                </li>
+
+
+                <!--High Managment-->
+                <li>
+                  <a   routerLink="/about/info/university-president"> الإدارة العليا</a>
+               </li>
+
+                <li>
+                  <a href="javascript:void(0);"> الطـــلاب</a>
+                  <i class="fas fa-angle-down fa-xs i"></i>
+
+                  <!-- start shection navbar menu and sup_menu -->
+
+                  <div class="sup_menu">
+                    <ul class="unorder_sup_menu">
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fas fa-passport i_first"></i>
+                          <a routerLink="/student/scholarships">
+                           خدمات الوافدين</a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fas fa-certificate i_first"></i>
+                          <a
+                            routerLink="/student/postgraduate">
+                            الدراسات العليا</a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fas fa-swimmer i_first"></i>
+                          <a
+                            routerLink="/student/youthcare"
+                           >
+                           رعاية الشباب</a>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fas fa-fighter-jet i_first"></i>
+                          <a
+                            href="http://luxor.edu.eg:8083"
+                            target="_blank">
+                           خدمات التربية العسكرية</a>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fas fa-university i_first"></i>
+                          <a
+                            href="https://alzahraa.mans.edu.eg/"
+                            target="_blank">
+                           المدن الجامعية</a>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fas fa-sticky-note i_first"></i>
+                          <a
+                            href="https://alzahraa.mans.edu.eg/"
+                            target="_blank">
+                           جدول الامتحانات </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="parent" style="display: inline-block">
+                          <i class="fas fa-certificate i_first"></i>
+                          <a
+                            href=""
+                            target="_blank">
+                           نتائج الطلاب </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- start section navbar menu and sup_menu -->
+                </li>
+
+                <li>
+                  <a href="javascript:void(0);"> البحث العلمي</a>
+
+                </li>
+
+                <li>
+                  <a routerLink="/society/activites"> أنشطة الجامعة المجتمعية </a>
+                  </li>
+
+                <li>
+                  <a
+                    style="font-size: 16px"
+                    >
+                    مراكز ومشاريع</a>
+                    <i class="fas fa-angle-down fa-xs i"></i>
+
+                    <!--Sub menu start-->
+                    <div class="sup_menu">
+                      <ul class="unorder_sup_menu">
+                        <li>
+                          <div class="parent" style="display: inline-block">
+                            <i class="fa fa-columns i_first"></i>
+                            <a routerLink="/projects/management">مكتب إدارة المشروعات</a>
+                          </div>
+
+                        </li>
+
+
+                        <li>
+                          <div class="parent" style="display: inline-block">
+                            <i class="fa fa-chalkboard-teacher i_first"></i>
+                            <a href="http://luxor.edu.eg:8081/SkillsDevelopmentLogin" target="_blank">مركز تنمية قدرات أعضاء هيئة التدريس والقيادات</a>
+                          </div>
+
+                        </li>
+
+
+                        <li>
+
+                          s<div class="parent" style="display: inline-block">
+                            <i class="fa fa-pen i_first"></i>
+                            <a routerLink="/projects/calendarC">مركز القياس والتقويم</a>
+                          </div>
+
+                        </li>
+
+
+                        <li>
+                          <div class="parent" style="display: inline-block">
+                            <i class="fa fa-globe-africa i_first"></i>
+                            <a routerLink="/projects/INcooperation">مكتب التعاون الدولي والعلاقات الخارجية</a>
+                          </div>
+
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!--Sub menu End-->
+
+
+                </li>
+
+                <li>
+                  <a style="font-size: 16px" routerLink="/guesthouse">دار الضيافة</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- end section navbar menu -->
+          </div>
+          <div class="md-2">
+            <!-- start section navbar menu -->
+            <div class="clear"></div>
+            <div class="nav_toggle">
+              <i class="fas fa-outdent icon" (click)="toggleClass()"></i>
+            </div>
+
+            <!-- end section navbar menu -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- end section header and navbar -->
+</header>
+
+<!-- end section header -->

@@ -1,0 +1,118 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="main">
+        <div class="profile">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">رعاية الشباب بالجامعة</h5>
+                            <p class="card-text">رعاية الشباب بالجامعة ترحب بكم من اجل استفساراتكم.</p>
+                            <button class="btn btn-primary" (click)="showPopup()">ارسال استفسار</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">شئون الطلاب بالجامعة</h5>
+                            <p class="card-text">شئون الطلاب بالجامعة ترحب بكم من اجل استفساراتكم.</p>
+                            <button class="btn btn-primary" (click)="showPopup()"> ارسال استفسار</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">رعاية الشباب بالكلية</h5>
+                            <p class="card-text">رعاية الشباب بالكلية ترحب بكم من اجل استفساراتكم.</p>
+                            <button class="btn btn-primary" (click)="showPopup()">ارسال استفسار</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">شئون الطلاب بالكلية</h5>
+                            <p class="card-text">شئون الطلاب بالكلية ترحب بكم من اجل استفساراتكم.</p>
+                            <button class="btn btn-primary" (click)="showPopup()">ارسال استفسار</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-75">
+                    <div class="card-body width-more">
+                        <h5 class="card-title">طلبات قيد المارجعة</h5>
+                        <span>5</span>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a routerLink="/student/request-review" class="btn btn-primary">عرض</a>
+                    </div>
+                </div>
+                <div class="card w-75">
+                    <div class="card-body width-more">
+                        <h5 class="card-title">طلبات جارية</h5>
+                        <span>5</span>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a routerLink="/student/requests-progress" class="btn btn-primary">عرض</a>
+                    </div>
+                </div>
+                <div class="card w-75">
+                    <div class="card-body width-more">
+                        <h5 class="card-title">طلبات منتهية</h5>
+                        <span>5</span>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a routerLink="/student/completed-request" class="btn btn-primary">عرض</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-group">
+            <a routerLink="/student/students" class="list-group-item list-group-item-action" 
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                الرئيسية
+            </a>
+            
+            <a routerLink="/student/student-ticket" class="list-group-item list-group-item-action"
+            routerLinkActive="active">استفسارات</a>
+
+            <a routerLink="/student/portal" class="list-group-item list-group-item-action"
+            routerLinkActive="active">portal</a>
+
+            <a routerLink="/student/chat" class="list-group-item list-group-item-action"
+            routerLinkActive="active">chat</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup" [class.show_popup]="show">
+    <div class="container">
+            <div class="content">
+                <div class="imag">
+                    <label>من فضلك اختر الصورة (ليس الزامي)</label>
+                    
+                    <input type="file" #file (change)="getimg(file)" [value]="fileImg">
+                    <div class="photo">
+                        
+                        <img [src]="fileImg">
+                    </div>
+                </div>
+                <hr>
+                <div class="des">
+                    <label>من فضلك ادخل استفسار </label>
+                    <textarea rows="4" #cont [value]="content">{{content}}</textarea>
+                </div>
+                <hr>
+                <div class="action">
+                    <button type="button" class="btn btn-primary" (click)="send(cont)"> ارسال</button>
+                    <button type="button" class="btn btn-success" (click)="close_popup()"> cancel </button>
+                </div>
+                <i class="fas fa-times-circle" (click)="close_popup()"></i> 
+            </div>
+        
+    </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

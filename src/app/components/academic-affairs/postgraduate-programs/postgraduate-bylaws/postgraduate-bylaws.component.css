@@ -1,0 +1,9 @@
+@import "../../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message ul{
+    margin-right: 20px;
+    list-style: none;
+}
+.contain-message ul li a{
+    color: #3f51b5;
+}

@@ -1,0 +1,81 @@
+<app-header></app-header>
+
+<div class="single">
+  <div class="container">
+    <div class="content">
+      <h1 class="center">{{ title }}</h1>
+      <div class="photo">
+        <img [src]="photo | imagePipe: defualtImage" alt="No Phone Image" />
+      </div>
+      <div class="date">{{ time | date: "medium" }}</div>
+      <div class="dep" >القسم :- {{ depa }}</div>
+      <p class="des" >{{ content }}</p>
+
+      <div class="pop">
+        <button
+          class="btn btn-success"
+          (click)="update()"
+        >
+          تعديل
+        </button>
+        <button
+          class="btn btn-danger"
+          (click)="update()"
+        >
+          حذف
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup" [class.show_popup]="show">
+  <div class="container">
+    <form>
+      <div class="content">
+        <div class="imag">
+          <label>من فضلك اختر الصورة</label>
+          <input type="file" #file (change)="getimg(file, $event)" />
+          <div class="photo">
+            <img [src]="photo" [src]="fileImg" />
+          </div>
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك عنوان للمجلة </label>
+          <input type="text" #titleOfMaga [value]="title" required />
+        </div>
+        <hr />
+        <div class="des">
+          <label>من فضلك ادخل الوصف </label>
+          <textarea rows="4" #info [value]="content" required>{{
+            content
+          }}</textarea>
+        </div>
+        <hr />
+        <div class="department">
+          <label>من فضلك ادخل القسم </label>
+          <input type="text" #department [value]="depa" required />
+        </div>
+        <hr />
+        <div class="action">
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="updateItem(titleOfMaga, info, department)"
+          >
+            تعديل
+          </button>
+          <button type="button" class="btn btn-danger" (click)="deleteitem()">
+            حذف
+          </button>
+        </div>
+        <i class="fas fa-times-circle" (click)="close_popup()"></i>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

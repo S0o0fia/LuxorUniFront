@@ -1,0 +1,26 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+.system-message .contain-message .body-artical{
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 16px;
+}
+
+.system-message .contain-message .body-artical a{
+    text-decoration: none;
+color : #0062cc;
+}
+
+.system-message .contain-message .order-list{
+color : #0062cc;
+    margin-top: 30px;
+}
+
+.system-message .contain-message .order-list ol{
+    margin:15px ;
+    color: var(--words-color);
+}
+.system-message .contain-message .contant div a{
+    color: #3f51b5;
+    text-decoration: none;
+}

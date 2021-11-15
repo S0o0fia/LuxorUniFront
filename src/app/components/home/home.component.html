@@ -1,0 +1,619 @@
+<app-header></app-header>
+
+<!-- start section carousel -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li
+      data-target="#carouselExampleCaptions"
+      data-slide-to="0"
+      class="active"
+    ></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <!-- start slider1-->
+    <div class="carousel-item active">
+      <div class="overlay"></div>
+      <img
+        src="assets/photo/slider1.png"
+        class="d-block w-100 sliderimg"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6">
+            <ng-template #sqr>
+              <div class="persp">
+                <div class="rot">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="box one wow fadeIn" data-wow-duration="1.5s">
+                        <div class="head">
+                          <a routerLink="/university-journal"> المجلة</a>
+                        </div>
+                        <p>شاهد هنا اهم الاخــبار</p>
+                        <p>ما تم انجازه علي مستوي الجامعه علي هيئه مجلة</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="box two wow fadeIn"
+                        data-wow-duration="1.5s"
+                        data-wow-delay=".5s"
+                      >
+                        <div class="head">
+                          <a routerLink="/view-all-news"> الاخبار </a>
+                        </div>
+                        <p>شاهد هنا كاقه الاخــبار</p>
+                        <p>اي موتمرات او الاخبار عامه تابعه للجامعة</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="box one wow fadeIn"
+                        style="margin-top: 10px"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="1s"
+                      >
+                        <div class="head">
+                          <a routerLink="/Research/sector-news"> الاحداث</a>
+                        </div>
+                        <p>شاهد هنا اهم الاحداث</p>
+                        <p>كافه الاحداث العامه في الجامعه.</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="box two wow fadeIn"
+                        style="margin-top: 10px"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="1.5s">
+                        <div class="head">
+                          <a
+                            routerLink="/Research/scientific-awards"
+                            class="four">
+                            خروجون ودراسات عليا
+                          </a>
+                        </div>
+                        <p>شاهد هنا خروجون ودراسات عليا</p>
+                        <p></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Slider2-->
+
+
+   <!--Start Slider2-->
+    <div class="carousel-item">
+      <div class="overlay"></div>
+      <img
+        src="assets/photo/slider2.png"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <div class="row">
+          <div class="col-md-6">
+            <ng-container *ngTemplateOutlet="myName"></ng-container>
+          </div>
+          <div class="col-md-6">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--End Slider2-->
+
+
+  <!--Start Slider3-->
+  <div class="carousel-item">
+    <div class="overlay"></div>
+    <img
+      src="assets/photo/slider3.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <div class="row">
+        <div class="col-md-6" style="margin-top:20%;">
+          <div class="item-1">تلقي لقاح كورونا شرط لحصول الطلاب على الكارنيه <br>
+            <br>
+            <div class="text-center all-show">
+
+              <a href="https://egcovac.mohp.gov.eg/#/home" target="_blank" >
+                <span></span>
+               التسجيل لتلقي اللقاح؟
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--End Slider3-->
+
+
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleCaptions"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleCaptions"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- end section carousel -->
+
+<!-- start section news-->
+
+<div class="news">
+  <div class="container">
+    <h3 class="wow bounceInRight">
+      <span style="margin-left: 5px"> أهم </span>
+      <span class="bord-bot"></span>
+    </h3>
+    <div class="row">
+      <ng-container *ngIf="items; else nameIf">
+        <div
+          class="col-lg-4 col-sm-6"
+          *ngFor="let item of items | slice: 0:6; let i = index; trackBy: track"
+        >
+          <a routerLink="/single-event">
+            <div
+              class="card text-center wow bounceInUp"
+              data-wow-duration="2s"
+              (click)="getID(i)"
+            >
+              <h6 class="titleOfEvent" #title>{{ item.title }}</h6>
+              <div class="images">
+                <img
+                  [src]="item.image | imagePipe: defualtImage"
+                  class="card-img-top"
+                  alt="No Phone Image"
+                />
+                <div class="overlay"></div>
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  {{ item?.created_at | date: "medium" }}
+                </div>
+
+                <p class="card-text" #des>
+                  {{ item.description.slice(0, 115) }} ...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </ng-container>
+    </div>
+    <div class="text-center all-show">
+      <a routerLink="/view-all-news">
+        <span></span>
+        جميع اخبار الجامعة
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- end section news-->
+<ng-template #nameIf>
+  <div class="alert alert-primary" role="alert">no event available</div>
+</ng-template>
+
+<!-- start section servces-->
+
+<div class="servces">
+  <div class="overlay">
+   <div class="container">
+    <div id="mySidenav" class="sidenav">
+
+      <a href="#" id="about" class="fa fas fa-book-reader">&nbsp;<span>خدمات الطلاب</span></a>
+      <a href="#" id="blog" class="fa fas fa-user-tie"><span>خدمات الخريجين</span></a>
+      <a href="http://luxor.edu.eg:8080" target="_blanck" id="projects" class="fa fas fa-user-graduate" ><span>خدمات الدراسات العليا </span></a>
+    </div>
+   </div>
+  </div>
+  </div>
+
+<!-- end section servces-->
+
+<!-- start section media-->
+
+<div class="media">
+  <div class="container">
+    <h3 class="wow bounceInRight">
+      الجامعة فى أسبوع <span class="bord-bot"></span>
+    </h3>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <div class="card text-center wow bounceInUp" data-wow-duration="2s">
+          <div class="images">
+              <iframe width="400" height="200" src="https://www.youtube.com/embed/C2ceUkbUs3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+          </div>
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">مشاهدة الفديو</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6">
+        <div
+          class="card text-center wow bounceInUp"
+          data-wow-delay=".3s"
+          data-wow-duration="2s"
+        >
+          <div class="images">
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/pIgn0yTb1MQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">مشاهدة الفديو</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6">
+        <div
+          class="card text-center wow bounceInUp"
+          data-wow-delay=".5s"
+          data-wow-duration="2s"
+        >
+          <div class="images">
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/Q2DNP69_jFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="card-body">
+            <a href="#" class="btn btn-primary">مشاهدة الفديو</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center"></div>
+  </div>
+</div>
+
+<!-- end section media-->
+
+<!-- start section E-Learning-->
+
+<div class="Training">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+
+
+     </div>
+      <div class="col-md-5">
+        <div
+          class="ccontan wow bounceInLeft elearining"
+          data-wow-offset="200"
+          data-wow-duration="2s"
+        >
+        <h3>
+          <span style="margin-left: 5px">التعليم الاكتروني</span>
+          <span class="bord-bot"></span> بجامعة الاقصر
+        </h3>
+        <p>تتيح جامعة الأقصر لطلابها منصة  لتعليم الالكتروني بشكل كامل</p>
+        <div class="icon">
+          <div class="row">
+            <div class="col-md-12">
+               <br/>
+               <br/>
+               <div class="text-center all-show">
+                <a routerLink="#">
+                  <span></span>
+                  <i class="fa fa-chalkboard-teacher"></i>
+                  الدخول للمنصة
+                </a>
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end section E-learning-->
+
+<!-- start section Magazine-->
+
+<div class="test">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="content wow bounceInRight" data-wow-duration="1.5s">
+
+          <h1 style="margin-top: 20%;"> <i class="fa fa-newspaper"></i> &nbsp; مجلة الجامعة</h1>
+
+        </div>
+        <br>
+        <div class="text-center all-show" >
+          <a routerLink="#" style="background-color:white; color:#365490">
+            <span></span>
+            <i class="fas fa-newspaper"></i>
+            تصفح المجلة
+          </a>
+          </div>
+      </div>
+      <div class="col-md-6" >
+        <ng-template #myName>
+          <div class="information">
+            <div class="move-3d">
+              <div class="data">
+                <div>
+                  <div
+                  class="items wow bounceInUp"
+                  data-wow-duration="1.5s"
+
+                >
+                  <div class="icon">
+                    <i class="fas fa-unlock-alt"></i>
+                  </div>
+                  <span class="item"
+                    ><a routerLink="/about/info/university-president"
+                      >كلمة رئيس الجامعة</a
+                    ></span
+                  >
+                </div>
+                  <div class="items wow bounceInUp" data-wow-duration="1.5s"  data-wow-delay=".3s">
+                    <div class="icon">
+                      <i class="fas fa-unlock-alt"></i>
+                    </div>
+                    <span class="item"
+                      ><a routerLink="/view-all-news">الأخبار</a></span
+                    >
+                  </div>
+
+                  <div
+                    class="items wow bounceInUp"
+                    data-wow-duration="1.5s"
+                    data-wow-delay=".6s"
+                  >
+                    <div class="icon">
+                      <i class="fas fa-unlock-alt"></i>
+                    </div>
+                    <span class="item"
+                      ><a href="https://alzahraa.mans.edu.eg/" target="_blanck">المدينة الجامعية</a
+                      ></span
+                    >
+                  </div>
+                  <div
+                    class="items wow bounceInUp"
+                    data-wow-duration="1.5s"
+                    data-wow-delay=".9s"
+                  >
+                    <div class="icon">
+                      <i class="fas fa-unlock-alt"></i>
+                    </div>
+                    <span class="item"
+                      ><a routerLink="/Research/scientific-awards">جوائز علمية</a></span
+                    >
+                  </div>
+                  <div
+                    class="items wow bounceInUp"
+                    data-wow-duration="1.5s"
+                    data-wow-delay="1.2s"
+                  >
+                    <div class="icon">
+                      <i class="fas fa-unlock-alt"></i>
+                    </div>
+                    <span class="item"
+                      ><a routerLink="/university-journal">المجلة العلمية</a></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+        <img src="assets/photo/magazine.gif" class="magazineimg"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end section Magazine-->
+<!--Start of Eductional Email section-->
+<div class="email text-center">
+  <div class="email">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+          <div class="content wow bounceInLeft" data-wow-duration="1.5s" style="text-align: center;">
+
+            <div class="text-center emailtext" >
+              <h2 routerLink="#" style="color:white; margin-top: 30%; cursor: pointer;">
+
+                <h2 class="title1">الإيميل الأكاديمي؟</h2>
+                <h2 class="title2">
+                  <span></span>
+                  فتح outlook <i class="fas fa-paper-plane"></i> </h2>
+              </h2>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of Eductional Email section-->
+
+<!--start statistics -->
+
+<div class="stats text-center">
+  <div class="state">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-xs-12 text-center data">
+          <i class="fa fa-users fa-5x i"></i>
+          <h6>اكثر من</h6>
+          <!-- <h3 class="timer">1</h3> -->
+          <h3 class="timer">{{ student_num }}</h3>
+          <!-- <h3>{{student_num}}</h3> -->
+          <h4>عدد طلاب الجامعة</h4>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 text-center data">
+          <i class="fa fa-user fa-5x i"></i>
+          <h6>اكثر من</h6>
+          <h3 class="timer1" id="student">{{ student_num }}</h3>
+          <!-- <h3>{{ student_num }}</h3> -->
+          <!-- <h3 class="timer1">{{counter.employee_num}}</h3> -->
+          <h4>عدد أعضاء هيئة التدريس</h4>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 text-center data">
+          <i class="fa fa-graduation-cap fa-5x i"></i>
+          <h6>اكثر من</h6>
+          <!-- <h3 class="timer2">{{counter.instructors_num}}</h3> -->
+          <h3 class="timer2">{{ employee_num }}</h3>
+          <!-- <h3>{{ employee_num }}</h3> -->
+          <h4>عدد طلاب الدراسات العليا</h4>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 text-center data">
+          <i class="fa fa-id-card fa-5x i"></i>
+          <h6>اكثر من</h6>
+          <h3 class="timer3">0</h3>
+          <!-- <h3 class="timer3">{{ instructors_num }}</h3> -->
+          <h4>عدد العاملين بالكادر العام</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end statistics -->
+
+<!-- start section contact-->
+
+<div class="contact">
+  <div class="container">
+    <h3 class="wow bounceInRight">
+      <span style="margin-left: 5px"> تواصل </span>
+      <span class="bord-bot"></span> معنا
+    </h3>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="soical-media">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/">
+                <i class="fab fa-linkedin fa-3x icons"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/">
+                <i class="fab fa-youtube fa-3x icons"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/">
+                <i class="fab fa-pinterest fa-3x icons"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/">
+                <i class="fab fa-instagram fa-3x icons"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/">
+                <i class="fab fa-twitter fa-3x icons"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/">
+                <i class="fab fa-facebook fa-3x icons"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7191.705229229852!2d32.633493!3d25.676179999999988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xccac387a294f12e5!2z2KzYp9mF2LnYqSDYp9mE2KPZgti12LEgLUx1eG9yIHVuaXZlcnNpdHk!5e0!3m2!1sar!2seg!4v1607636896994!5m2!1sar!2seg"
+            width="100%"
+            height="555"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-title text-center">
+          <h4 class="title">إذا كان لديك اي استفسار تواصل معنا</h4>
+        </div>
+        <div class="form-group text-center">
+          <form class="contact-form">
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="الاسم"
+              required
+            />
+            <input
+              class="form-control form-control-lg"
+              type="email"
+              placeholder="البريد الإلكتروني"
+              required
+            />
+            <input
+              class="form-control form-control-lg"
+              type="number"
+              placeholder="رقم التليفون"
+              required
+            />
+            <textarea
+              class="form-control"
+              cols="30"
+              rows="7"
+              placeholder="استفسارك"
+            ></textarea>
+            <input
+              class="form-control form-control-lg"
+              type="submit"
+              value="ارسال"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end section contact-->
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

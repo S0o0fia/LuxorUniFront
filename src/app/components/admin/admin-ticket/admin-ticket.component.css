@@ -1,0 +1,31 @@
+@import '../admin-main/admin-main.component.css';
+
+.card .card-body a{
+    background-color: var(--main_color);
+    border: none;
+    box-shadow: none;
+}
+
+.w-75{
+    margin: 20px auto 0;
+}
+
+.card .card-body span{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--main_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 22px;
+    color: #FFF;
+    margin-right: 7px;
+}

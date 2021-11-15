@@ -1,0 +1,21 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message p{
+    margin: 30px 0;
+    line-height: 25px;
+}
+.contain-message .contain{
+    margin-bottom: 30px;
+}
+.contain-message .contain p{
+    margin:0;
+}
+.contain-message .contain ol,.contain-message .contain ol li ol{
+    margin:  20px;
+}
+.contain-message .contain ol li{
+    margin: 20px 0;
+}
+.contain-message .contain ol li p{
+    margin-right: -20px;
+}

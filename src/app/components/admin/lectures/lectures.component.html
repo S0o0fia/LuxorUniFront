@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="main">
+      <div class="profile">
+        <div class="exams">
+          <h4>جدول المحاضرات</h4>
+          <button type="button" (click)="openPopUp()">اضافة</button>
+          <ng-container *ngIf="lenthOfLectures > 0;else myIf">
+            <div class="card">
+              <div *ngFor="let lecture of allLectures;trackBy:track">
+                <img [src]="'https://universityqwer.000webhostapp.com/images/' + lecture.image | imagePipe:defualtImage" class="card-img-top" alt="image not found">
+                <button type="button" class="btn btn-danger" (click)="deleteLecture(lecture.id)">حــذف</button>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <app-role></app-role>
+
+  </div>
+</div>
+
+<div class="popup" [class.show_popup]="show">
+  <div class="container">
+      <form>
+          <div class="content">
+              <span class="numberOfNew" #i>{{indexOfLecture}}</span>
+              <div class="imag">
+                  <input type="file" #file (change)="getimg(file,$event)">
+                  <div class="photo">
+                      <img [src]="fileImg">
+                  </div>
+              </div>
+              <hr>
+              <div class="action">
+                  <button type="button" class="btn btn-primary" (click)="addLecture(file)"> اضــافــة</button>
+                  <button type="button" class="btn btn-danger" (click)="deleteLectures()"> حذف </button>
+              </div>
+              <i class="fas fa-times-circle" (click)="close_popup()"></i>
+          </div>
+      </form>
+
+  </div>
+</div>
+
+<ng-template #myIf>
+  <div class="alert alert-primary" role="alert" style="text-align: left;">
+    no Lectures available
+  </div>
+</ng-template>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="revierw">
+    <div class="container">
+        <div class="head">
+            <h5> الطلبات الجارية</h5>
+            <input type="search">
+        </div>
+        <div class="content" *ngFor="let item of allrequest">
+          <div class="images">
+              <img src="../../../../assets/photo/alex-knight-2EJCSULRwC8-unsplash.jpg" alt="">
+          </div>
+          <div class="info">
+              <a routerLink="/admin/admin-chat"><h5 (click)="getRequrstId(item.id)">{{item.title}}</h5></a>
+              <div class="time">{{item.created_at | date: "medium"}}</div>
+          </div>
+      </div>
+    </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

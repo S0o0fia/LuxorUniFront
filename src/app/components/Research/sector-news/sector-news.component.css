@@ -1,0 +1,9 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message a{
+    color: #3f51b5;
+    text-decoration: none;
+}
+.contain-message p{
+    margin-top: 10px;
+}

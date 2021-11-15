@@ -1,0 +1,39 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+.contain-message{
+    overflow: hidden;
+}
+
+.contain-message .head-message .pho{
+    float: left;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.contain-message .head-message .pho img{
+    width: 100%;
+    height: 100%;
+}
+
+.contain-message .head-message ul{
+    margin: 30px 20px 0 0;
+}
+
+.contain-message .head-message ul li{
+    margin-top: 10px;
+}
+
+.contain-message .head-message .h2,
+.contain-message .head-message .h3{
+    margin-top: 50px;
+    color: #3f51b5;
+}
+.contain-message .head-message .h3{
+    margin-bottom: 25px;
+}
+
+@media (max-width: 376px) { 
+    .system-message .message-title h2::after{
+        top: 70px;
+    }
+}

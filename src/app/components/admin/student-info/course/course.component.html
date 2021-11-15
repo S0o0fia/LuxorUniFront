@@ -1,0 +1,163 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="main">
+    <div class="profile">
+      <button type="button" class="btn btn-success" style="margin-bottom: 20px;" (click)="showPopup()">
+        اضافة ماده
+      </button>
+
+      <div class="chooseCollege">
+        <label>من فضلك السنه الدراسية </label>
+          <input list="nameOfCollage" (change)="college($event)"/>
+          <datalist id="nameOfCollage">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+          </datalist>
+      </div>
+
+      <ng-container *ngIf="lenthOfStudent > 0; else myIf">
+        <table class="table table-bordered table-striped table-hover">
+          <thead class="table-primary">
+            <tr>
+              <th>ع</th>
+              <th>الماده</th>
+              <th>عدد الساعات</th>
+              <th>الدرجة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="
+                let course of filterAllCourse | slice: start:end;
+                let i = index
+              "
+            >
+              <td>{{ i + 1 }}</td>
+              <td>{{ course.title }}</td>
+              <td>{{ course.credit }}</td>
+              <td>{{ course.grade }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" [ngClass]="prev_able ? 'disabled' : 'NULL'">
+              <a
+                class="page-link"
+                routerLink="/admin/studnet-info/course"
+                tabindex="-1"
+                aria-disabled="true"
+                (click)="prev()"
+                >السابق</a
+              >
+            </li>
+            <div
+              *ngFor="
+                let student of filterAllCourse
+                  | slice: num_of_page_defualt:num_of_page_end;
+                index as i;
+                trackBy: track
+              "
+            >
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  routerLink="/admin/studnet-info/course"
+                  (click)="go_page(num)"
+                  #num
+                >
+                  {{ i + 1 }}
+                </a>
+              </li>
+            </div>
+            <li
+              class="page-item"
+              [ngClass]="next_isdisable ? 'disabled' : 'NULL'"
+            >
+              <a
+                class="page-link"
+                routerLink="/admin/studnet-info/course"
+                (click)="next()"
+                >التالي</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </ng-container>
+    </div>
+    <app-role></app-role>
+  </div>
+</div>
+
+<ng-template #myIf>
+  <div
+    class="alert alert-primary"
+    role="alert"
+    style="text-align: left; margin-top: 20px"
+  >
+    no Students available
+  </div>
+</ng-template>
+
+<div class="popup" [class.show_popup]="show">
+  <div class="container">
+    <form>
+      <div class="content">
+        <span class="numberOfNew" #i>{{ id_student }}</span>
+        <div class="title">
+          <label>من فضلك الماده</label>
+          <input type="text" [value]="name" #name_value />
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك اختر السنه الدراسية </label>
+          <input list="roleID" [value]="role" #level_value />
+
+          <datalist id="roleID">
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+          </datalist>
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك ادخل عدد الساعات</label>
+          <input type="number" #hours_value />
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك ادخل الدرجة </label>
+          <input type="number" #grade_value />
+        </div>
+        <hr />
+        <div class="action">
+          <button
+            type="button"
+            class="btn btn-primary color"
+            (click)="
+              create_Course(
+                name_value,
+                level_value,
+                hours_value,
+                grade_value
+              )
+            "
+          >
+            اضافة
+          </button>
+        </div>
+        <i class="fas fa-times-circle" (click)="close_popup()"></i>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

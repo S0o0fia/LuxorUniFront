@@ -1,0 +1,137 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-image: linear-gradient(to bottom ,#2b4eb1,#121C38); */
+  background-image: url(../../../../assets/photo/hero-img_copy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+form {
+  padding: 50px 20px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(5, 154, 170, 0.5),
+    rgb(4, 76, 87, 0.5)
+  );
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  /* rgba(5,154,170,.5) */
+}
+
+form h2 {
+  text-align: center;
+  padding: 10px 0 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.login .user,
+.login .password {
+  background-image: linear-gradient(to right, #152442, #0e3a97);
+  width: 350px;
+  position: relative;
+}
+
+.login .user input,
+.login .password input {
+  background-color: transparent;
+  padding: 20px 5px;
+  border: none;
+  outline: none;
+  direction: ltr;
+  width: 78%;
+  caret-color: #00aeef;
+  color: #00aeef;
+  position: relative;
+  z-index: 9999;
+}
+.login .user label,
+.login .password label {
+  position: absolute;
+  top: 10px;
+  left: 75px;
+  color: #00aeef;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.login .user input:focus + label,
+.login .password input:focus + label {
+  position: absolute;
+  top: -29px;
+  left: 48px;
+  color: #00aeef;
+  font-size: 15px;
+}
+
+.login .user .has-data + label,
+.login .password .has-data + label {
+  position: absolute;
+  top: -29px;
+  left: 48px;
+  color: #00aeef;
+  font-size: 15px;
+}
+
+.login .user {
+  margin-bottom: 30px;
+}
+
+.login .user .icon,
+.login .password .icon {
+  width: 15%;
+  color: #00aeef;
+  margin-left: 5%;
+  font-size: 25px;
+}
+
+.radio {
+  margin-top: 10px;
+}
+
+.radio label {
+  color: #fff;
+  margin-left: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.radio label.right {
+  text-align: right;
+  float: right;
+  direction: ltr;
+}
+
+.radio label.right a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login .button {
+  background-color: #00aeef;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.login .button button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 25px;
+}

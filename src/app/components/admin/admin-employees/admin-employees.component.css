@@ -1,0 +1,87 @@
+@import '../admin-main/admin-main.component.css';
+.theResult  .year table tbody{
+  color: var(--main_color);
+  font-weight: 600;
+}
+
+.main .profile .btn-success{
+  margin: 0 20px 20px 0;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: none;
+  background-color: var(--main_color);
+}
+
+.main .profile table{
+  min-width: 100%;
+}
+
+.main .profile table tbody tr td button{
+  margin-right: 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  box-shadow: none;
+}
+
+.color{
+  background-color: var(--main_color);
+  box-shadow: none;
+  border: 1px solid var(--main_color);
+}
+
+.numberOfNew{
+  font-size: 20px;
+  color: #FFF;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main_color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  float: left;
+}
+
+
+.page-item {
+  display: inline-block;
+}
+
+.pagination li {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.pagination li:hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+.pagination li a {
+  box-shadow: none;
+  color: var(--main_color);
+}
+
+.pagination li a:hover {
+  background-color: var(--main_color);
+  color: #fff;
+}
+
+/* make page rsponsive in all media */

@@ -1,0 +1,81 @@
+<app-header></app-header>
+
+<div class="single">
+  <div class="container">
+    <div class="content">
+      <h5 class="titleEvent">{{titleEvent}}</h5>
+      <div class="photo">
+        <img
+          [src]="photo | imagePipe: defualtImage"
+          alt="No Phone Image"
+        />
+      </div>
+      <div class="date" #timeing>{{ time | date: "medium" }}</div>
+      <p class="des" #descri>
+        {{ des }}
+      </p>
+
+      <div class="pop">
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="updateNew()"
+        >
+          تعديل
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          style="margin-right: 20px"
+          (click)="deleteNew()"
+        >
+          حذف
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup" [class.show_popup]="show">
+  <div class="container">
+    <form>
+      <div class="content">
+        <span class="numberOfNew" #i>{{ indexOfEvent }}</span>
+        <div class="imag">
+          <label>من فضلك اختر الصورة</label>
+          <input type="file" #file (change)="getimg(file, $event)" />
+          <div class="photo">
+            <img [src]="photo" [src]="fileImg" />
+          </div>
+        </div>
+        <div class="time">
+          <label>من فضلك ادخل عنوان للحدث </label>
+          <input type="text" [value]="titleEvent" #tit required />
+        </div>
+        <hr />
+        <div class="des">
+          <label>من فضلك ادخل الوصف </label>
+          <textarea rows="4" #info required>{{ desc }}</textarea>
+        </div>
+        <hr />
+        <div class="action">
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="updateItem(info,tit)"
+          >
+            تعديل
+          </button>
+          <button type="button" class="btn btn-danger" (click)="deleteitem()">
+            حذف
+          </button>
+        </div>
+        <i class="fas fa-times-circle" (click)="close_popup()"></i>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

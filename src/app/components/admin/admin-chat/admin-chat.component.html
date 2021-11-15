@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="main">
+    <div class="profile">
+      <div class="chating">
+        <ng-container *ngFor="let mess of arr">
+          <div class="inforamtion left" *ngIf="mess.sender_id != idUser">
+            <div class="photo">
+              <img
+                src="../../../../assets/photo/IMG20210123111518.jpg"
+                alt=""
+              />
+            </div>
+            <div class="message">
+              {{ mess.message }}
+            </div>
+            <div class="time">{{mess.created_at | date:"short"}}</div>
+          </div>
+
+          <div class="inforamtion right" *ngIf="mess.sender_id == idUser ">
+            <div class="photo">
+              <img src="https://via.placeholder.com/150" alt="" />
+            </div>
+            <div class="message">
+              {{ mess.message }}
+            </div>
+            <div class="time">{{mess.created_at | date:"short"}}</div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="send">
+        <div class="mass">
+          <input type="text" #contenting placeholder="Type Your Message Here" />
+        </div>
+        <div class="send_message">
+          <button type="button" class="btn btn-warning" (click)="sendMessage(contenting)">ارسال</button>
+          <button type="button" class="btn btn-warning" (click)="finishMessage()">انهاء المحادثة</button>
+          <input type="file" />
+        </div>
+      </div>
+    </div>
+
+    <app-role></app-role>
+  </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

@@ -1,0 +1,18 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+.contain-message .h3,
+.contain-message .menu,
+.contain-message .menu li{
+    margin-bottom: 10px;
+}
+
+
+.contain-message .menu li .supermenu,
+.contain-message .menu li .supermenu li .submenu{
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.contain-message .menu li a{
+    color: #3f51b5;
+    text-decoration: none;
+}

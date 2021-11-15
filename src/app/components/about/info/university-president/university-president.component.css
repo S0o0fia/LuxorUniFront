@@ -1,0 +1,50 @@
+@import "../../../../../assets/CSS/about/info-css/fixed.css";
+
+.system-message .contain-message .photo-unve-pres{
+    text-align: right;
+}
+
+.system-message .contain-message .photo-unve-pres img{
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+}
+
+.system-message .contain-message .head-artical{
+    text-align: center;
+    direction: rtl;
+    margin-bottom: 5px;
+}
+
+.system-message .contain-message .body-artical,
+.system-message .contain-message .foot-artical{
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 6px;
+}
+
+.system-message .contain-message .foot-artical{
+    margin-top: 40px;
+    margin-right: 50px;
+}
+
+.system-message .contain-message .Signature-artical{
+    float: left;
+    margin: 35px 0 0 100px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+
+    
+}
+
+.system-message .contain-message .Signature-artical .h6{
+    margin-top: 20px;
+}
+
+.UniversityPresidentImg
+{
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px #6f6e6f;
+}

@@ -1,0 +1,235 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="main">
+    <div class="profile">
+      <button type="button" class="btn btn-success" (click)="showPopupAdd()">
+        اضافة
+      </button>
+      <ng-container *ngIf="lenthOfEmployess > 0; else myIf">
+        <table class="table table-bordered table-striped table-hover">
+          <thead class="table-primary">
+            <tr>
+              <th>ع</th>
+              <th>الاسم</th>
+              <th>الدور</th>
+              <th>الايميل</th>
+              <th>التلفون</th>
+              <th>الاعدادات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of allUsers | slice: start:end; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.role_id }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.phone }}</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  (click)="
+                    showPopup(
+                      user.name,
+                      user.role_id,
+                      user.email,
+                      user.phone,
+                      user.init_password,
+                      user.info,
+                      user.ssd,
+                      user.id
+                    )
+                  "
+                >
+                  تعديل
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="
+                    showPopup(
+                      user.name,
+                      user.role_id,
+                      user.email,
+                      user.phone,
+                      user.init_password,
+                      user.info,
+                      user.ssd,
+                      user.id
+                    )
+                  "
+                >
+                  حذف
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" [ngClass]="prev_able ? 'disabled' : 'NULL'">
+              <a
+                class="page-link"
+                routerLink="/admin/admin-employees"
+                tabindex="-1"
+                aria-disabled="true"
+                (click)="prev()"
+                >السابق</a
+              >
+            </li>
+            <div
+              *ngFor="
+                let user of allUsers
+                  | slice: num_of_page_defualt:num_of_page_end;
+                index as i;
+                trackBy: track
+              "
+            >
+              <li class="page-item">
+                <a
+                  class="page-link"
+                  routerLink="/admin/admin-employees"
+                  (click)="go_page(num)"
+                  #num
+                >
+                  {{ i + 1 }}
+                </a>
+              </li>
+            </div>
+            <li
+              class="page-item"
+              [ngClass]="next_isdisable ? 'disabled' : 'NULL'"
+            >
+              <a
+                class="page-link"
+                routerLink="/admin/admin-employees"
+                (click)="next()"
+                >التالي</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </ng-container>
+    </div>
+
+    <app-role></app-role>
+  </div>
+</div>
+
+<ng-template #myIf>
+  <div
+    class="alert alert-primary"
+    role="alert"
+    style="text-align: left; margin-top: 20px"
+  >
+    no Employess available
+  </div>
+</ng-template>
+
+<div class="popup" [class.show_popup]="show">
+  <div class="container">
+    <form>
+      <div class="content">
+        <span class="numberOfNew" #i>{{ id_user }}</span>
+        <div class="title">
+          <label>من فضلك الاسم الجديد </label>
+          <input type="text" [value]="name" #name_value />
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك ادخل اسم الكليه </label>
+          <input list="nameOfCollage" #nameCollage />
+          <datalist id="nameOfCollage">
+            <option value="university_Luxor"></option>
+            <option value="FCI_Luxor"></option>
+            <option value="Arts_Luxor"></option>
+            <option value="Archaeology_luxor"></option>
+            <option value="alson_Luxor"></option>
+            <option value="hotels_luxor"></option>
+          </datalist>
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك الاسم الوظيفي </label>
+          <input list="roleID" [value]="role" #role_value />
+
+          <datalist id="roleID">
+            <option value="instructor"></option>
+            <option value="employee"></option>
+            <option value="mediacenter university"></option>
+            <option value="mediacenter computer"></option>
+            <option value="mediacenter arts"></option>
+            <option value="mediacenter archaeology"></option>
+            <option value="mediacenter alson"></option>
+            <option value="mediacenter hotels"></option>
+            <option value="support university"></option>
+            <option value="support computer"></option>
+            <option value="support arts"></option>
+            <option value="support archaeology"></option>
+            <option value="support alson"></option>
+            <option value="support hotels"></option>
+          </datalist>
+        </div>
+        <hr />
+        <div class="title">
+          <label> من فضلك ادخل الرقم القومي</label>
+          <input type="number" #ssd_value />
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك ادخل كلمه المرور </label>
+          <input type="email" #password_value />
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك ادخل الايميل</label>
+          <input type="email" [value]="email" #email_value />
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك ادخل رقم الهاتف</label>
+          <input type="email" [value]="phone" #phone_value />
+        </div>
+        <hr />
+        <div class="action">
+          <button
+            type="button"
+            class="btn btn-primary color"
+            (click)="
+              create_user(
+                name_value,
+                nameCollage,
+                role_value,
+                email_value,
+                phone_value,
+                ssd_value,
+                password_value
+              )
+            "
+          >
+            اضافة
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="
+              edit(name_value, phone_value, password_value, infoUser, ssd_value)
+            "
+          >
+            تعديل
+          </button>
+          <button type="button" class="btn btn-success" (click)="delete_user()">
+            حذف
+          </button>
+        </div>
+        <i class="fas fa-times-circle" (click)="close_popup()"></i>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

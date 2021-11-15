@@ -1,0 +1,29 @@
+@import "../../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message ul,
+.contain-message ol{
+    margin-right: 20px;
+}
+
+.contain-message .h6{
+    margin: 30px 0;
+}
+
+.contain-message ul li,
+.contain-message ol li{
+    margin-bottom: 8px;
+}
+
+.contain-message ul li a,
+.contain-message ol li a{
+    color: #3f51b5;
+}
+
+.contain-message ol{
+    list-style-type: upper-alpha;
+}
+@media (max-width: 376px) { 
+    .system-message .message-title h2::after{
+        top: 70px;
+    }
+}

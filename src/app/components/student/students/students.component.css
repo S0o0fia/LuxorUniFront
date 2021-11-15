@@ -1,0 +1,133 @@
+@import '../../admin/admin-main/admin-main.component.css';
+
+
+/*show pop up*/
+
+
+.popup{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(73, 73, 73,0.5);
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+@keyframes fadein{
+  0%{
+      opacity: 0;
+  }
+  25%{
+      opacity: 25%;
+  }
+  50%{
+      opacity: 50%;
+  }
+  75%{
+      opacity: 75%;
+  }
+  100%{
+      opacity: 100%;
+  }
+}
+
+.show_popup{
+  display: block;
+  animation: fadein .5s ease-in-out;
+  -webkit-animation: fadein .5s ease-in-out;
+}
+
+.popup .content{
+  width: 500px;
+  height: 600px;
+  border: 1px solid rgb(66, 66, 66);
+  padding: 20px 0 50px;
+  margin: 20px auto;
+  background-color: #FFF;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+.popup .imag label,.popup .imag input,
+.popup .title label,.popup .title input,
+.popup .des label,.popup .des textarea{
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.popup .imag label,.popup .des label,
+.popup .title label{
+  text-align: center;
+}
+
+.popup .imag .photo{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.popup .imag .photo img{
+  width: 100%;
+  height: 100%;
+}
+
+.popup .imag label{
+  font-size: 20px;
+  font-weight: 600px;
+}
+
+.popup .imag input,
+.popup .des textarea,.popup .title input{
+  width: 250px;
+  padding: 5px 20px;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 1px solid var(--main_color);
+}
+
+.popup .imag span{
+  position: relative;
+  font-size: 20px;
+}
+
+.popup .imag input[type="file"]{
+  border: none;
+}
+
+
+.popup .des textarea{
+  width: 350px;
+}
+
+.popup .action{
+  text-align: center;
+}
+
+.popup .action button{
+  margin-right: 20px;
+  box-shadow: none;
+}
+
+.popup .content i{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: var(--main_color);
+  cursor: pointer;
+}

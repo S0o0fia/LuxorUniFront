@@ -1,0 +1,69 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="main">
+    <div class="profile">
+      <button (click)="showPopup(name, desc, fileImg)">تعديل</button>
+      <div class="h4">
+        <span> مرحبا </span>
+        <h4 #name>{{ nameing }}</h4>
+      </div>
+      <div class="user">
+        <div class="image-user">
+          <img [src]="fileImg | imagePipe: defualtImage" alt="No Phone Image" />
+        </div>
+        <div class="name-role">{{ titleing }}</div>
+      </div>
+      <div class="desc" #desc>{{ contenting }}</div>
+    </div>
+    <app-role></app-role>
+  </div>
+</div>
+
+<div class="popup" [class.show_popup]="show">
+  <div class="container">
+    <form>
+      <div class="content">
+        <span class="numberOfNew">{{ idOfUser }}</span>
+        <div class="imag">
+          <label>من فضلك اختر صورة</label>
+          <input type="file" #file (change)="getimg(file, $event)" />
+          <div class="photo">
+            <img
+              [src]="fileImg | imagePipe: defualtImage"
+              alt="No Phone Image"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="title">
+          <label>من فضلك الاسم الجديد </label>
+          <input type="text" [value]="nameing" #na />
+        </div>
+        <hr />
+        <div class="des">
+          <label>من فضلك ادخل الوصف </label>
+          <input type="text" #descri [value]="contenting" />
+        </div>
+        <hr />
+        <div class="action">
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="edit(na, descri)"
+          >
+            تعديل
+          </button>
+          <button type="button" class="btn btn-success" (click)="close_popup()">
+            خروج
+          </button>
+        </div>
+        <i class="fas fa-times-circle" (click)="close_popup()"></i>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

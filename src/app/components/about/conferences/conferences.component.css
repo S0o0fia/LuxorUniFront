@@ -1,0 +1,29 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message .selection{
+    outline: none;
+    padding: 3px 0 3px 45px;
+    color: #666;
+}
+.contain-message .h6{
+    margin: 20px 0;
+    color: #3f51b5;
+    text-transform: capitalize;
+}
+.contain-message table thead tr{
+    text-align: center;
+}
+.contain-message table tbody td a{
+    color: #3f51b5;
+    text-decoration: none;
+}
+.contain-message .center{ 
+    width: 1px ;
+    margin: 50px auto;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

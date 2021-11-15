@@ -1,0 +1,53 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message ul {
+    list-style: none;
+    border-bottom: 1px solid #666;
+}
+
+.contain-message ul li{
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.contain-message ul li.active{
+    border: 1px solid #666;
+    border-bottom: none;
+    position: relative;
+    bottom: -1px;
+    z-index: 9;
+    background-color: #FFF;
+}
+
+.contain-message .hide{
+    display: none;
+}
+
+.contain-message table tbody tr{
+    line-height: 40px;
+    
+}
+
+.contain-message table tbody tr .fir{
+    width: 20%;
+}
+
+.contain-message table tbody tr .last{
+    width: 50%;
+}
+
+.contain-message table tbody tr .last a,.text a{
+    color: #3f51b5;
+    text-decoration: none;
+}
+
+.contain-message form input,
+.contain-message form textarea{
+    width: 50%;
+}
+
+.btn a{
+    text-decoration: none;
+    color: #FFF;
+}

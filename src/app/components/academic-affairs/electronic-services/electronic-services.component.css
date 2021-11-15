@@ -1,0 +1,14 @@
+@import "../../../../assets/CSS/about/info-css/fixed.css";
+
+.system-message .contain-message .h6{
+    margin-bottom: 20px;
+}
+.system-message .contain-message ol {
+    margin-right: 20px;
+}
+.system-message .contain-message ol li{
+    margin-bottom: 8px;
+}
+.system-message .contain-message ol li a{
+    color: #3f51b5;
+}

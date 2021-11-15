@@ -1,0 +1,77 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="main">
+        <div class="profile">
+          <button (click)="showPopup(name,title,desc,image)">تعديل</button>
+          <h4 #name><span>مرحبا</span>{{nameing}}</h4>
+          <div class="user">
+              <div class="image-user">
+                  <img [src]="fileImg" alt="" #image>
+              </div>
+              <div class="name-role">{{titleing}}</div>
+          </div>
+          <div class="title" #title>دكتور</div>
+          <div class="desc" #desc>{{contenting}}</div>
+        </div>
+        <div class="list-group">
+            <a routerLink="/student/students" class="list-group-item list-group-item-action"
+            routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                الرئيسية
+            </a>
+
+            <a routerLink="/student/student-ticket" class="list-group-item list-group-item-action"
+            routerLinkActive="active">استفسارات</a>
+
+            <a routerLink="/student/portal" class="list-group-item list-group-item-action"
+            routerLinkActive="active">portal</a>
+
+            <a routerLink="/student/chat" class="list-group-item list-group-item-action"
+            routerLinkActive="active">chat</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="popup" [class.show_popup]="show">
+  <div class="container">
+      <form>
+          <div class="content">
+              <span class="numberOfNew"></span>
+              <div class="imag">
+                <label>من فضلك اختر صورة</label>
+                  <input type="file" #file (change)="getimg(file)">
+                  <div class="photo">
+                      <img [src]="fileImg">
+                  </div>
+              </div>
+              <hr>
+              <div class="title">
+                  <label>من فضلك الاسم الجديد </label>
+                  <input type="text" [value]="nameing" #na>
+              </div>
+              <hr>
+              <div class="title">
+                  <label>من فضلك الاسم الوظيفي </label>
+                  <input type="text" [value]="titleing" #tit>
+              </div>
+              <hr>
+              <div class="des">
+                  <label>من فضلك ادخل الوصف </label>
+                  <textarea rows="4" #desc [value]="contenting">{{contenting}}</textarea>
+              </div>
+              <hr>
+              <div class="action">
+                  <button type="button" class="btn btn-primary" (click)="edit(na,tit,desc)">تعديل</button>
+                  <button type="button" class="btn btn-success" (click)="close_popup()">خروج </button>
+              </div>
+              <i class="fas fa-times-circle" (click)="close_popup()"></i>
+          </div>
+      </form>
+
+  </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

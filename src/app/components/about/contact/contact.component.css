@@ -1,0 +1,134 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/*start style section our news*/
+
+.contact {
+    padding: 40px 0;
+}
+
+.contact h3 {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.contact h3 span {
+    color: var(--main_color);
+}
+
+.contact h3 .bord-bot {
+    position: absolute;
+    top: 45px;
+    right: 15px;
+    width: 100px;
+    height: 2px;
+    background-color: var(--main_color);
+    z-index: 9;
+}
+
+/* start section contact us*/
+
+.contact .soical-media ul{
+    list-style: none;
+}
+
+.contact .soical-media ul li{
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+    padding: 5px;
+}
+
+.contact .soical-media ul li a{
+    text-decoration: none;
+}
+
+.contact .soical-media ul li a .icons{
+    color: var(--second_color);
+}
+
+.contact .soical-media ul li:hover{
+    background-color: #EEE;
+}
+
+.contact .soical-media ul li:hover .icons{
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+    -o-transition: .5s all ease-in-out;
+    transition: .5s all ease-in-out;
+}
+
+.contact .soical-media ul li:hover .fa-linkedin{
+    color: #0077B5;
+}
+
+.contact .soical-media ul li:hover .fa-youtube{
+    color: #cd201f;
+}
+
+.contact .soical-media ul li:hover .fa-pinterest{
+    color: #bd081c;
+}
+
+.contact .soical-media ul li:hover .fa-instagram{
+    color: #e4405f;
+}
+
+.contact .soical-media ul li:hover .fa-twitter{
+    color: #55acee;
+}
+
+.contact .soical-media ul li:hover .fa-facebook{
+    color: #3b5999;
+}
+
+.contact .form-title{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.contact .form-title .title{
+    font-weight: 400;
+    color: #FFf;
+    position: relative;
+    z-index: 10;
+    line-height: 1.4;
+    font-size: 22px;
+    padding: 30px 65px 36px;
+}
+.contact .form-title .title::after{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(-115.5% 0, 113% 0, 76% 100%);
+    left: 0;
+    background-color: var(--second_color);
+    top: 0;
+    content: "";
+    z-index: -1;
+}
+
+.contact .form-group .contact-form input,
+.contact .form-group .contact-form textarea{
+    outline: none;
+    margin-top: 20px;
+}
+
+.contact .form-group .contact-form input[type="submit"]{
+    background-color: var(--main_color);
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .contact .soical-media ul li{
+        width: 30%;
+    }
+    .contact .form-title{
+        margin-top: 50px;
+    }
+}
+
+
+/* end section contact us*/

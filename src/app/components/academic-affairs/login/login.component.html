@@ -1,0 +1,23 @@
+<div class="login">
+    <form class="form">
+        <h2>Login</h2>
+        <div class="user">
+            <input type="text" [className]="hasData ? 'has-data' : 'size20'" required (focusout)="hasContent($event.target.value)" #email>
+            <label>Username</label>
+            <i class="fas fa-user fa-2x icon"></i>
+        </div>
+        <div class="password">
+            <input type="password" [className]="hasData ? 'has-data' : 'size20'" required (focusout)="hasContent($event.target.value)" #password>
+            <label>Password</label>
+            <i class="fas fa-unlock-alt icon"></i>
+        </div>
+        <div class="radio">
+            <label for="radioBu">Remember Me</label>
+            <input type="radio" id="radioBu">
+            <label class="right"><a href="javascript:void(0)">For get Password?</a></label>
+        </div>
+        <div class="button" >
+            <button type="button" (click)="login(email,password)">Login</button>
+        </div>
+    </form>
+</div>

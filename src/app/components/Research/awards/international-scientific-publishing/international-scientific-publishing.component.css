@@ -1,0 +1,16 @@
+@import "../../../../../assets/CSS/about/info-css/fixed.css";
+
+.contain-message p{
+    margin-bottom: 20px;
+}
+.contain-message ol{
+    margin: 20px;
+}
+.contain-message ol li{
+    margin-bottom: 8px;
+}
+@media (max-width: 376px) { 
+    .system-message .message-title h2::after{
+        top: 70px;
+    }
+}

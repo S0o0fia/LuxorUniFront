@@ -1,0 +1,66 @@
+.revierw{
+    margin:20px auto;
+}
+
+.revierw .head{
+    margin-bottom: 20px;
+}
+
+.revierw .head h5{
+    display: inline-block;
+}
+
+.revierw .head input{
+    float: right;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: 1px solid var(--main_color);
+}
+
+.revierw .content{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    padding: 5px 20px;
+}
+
+.revierw .content .images{
+    grid-column: 1 span;
+    grid-row: 1 span;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.revierw .content .images img{
+    width: 100%;
+    height: 100%;
+}
+
+.revierw .content .info{
+    margin-right: 20px;
+    text-align: right;
+}
+
+.revierw .content .info a{
+    text-decoration: none;
+    color: var(--main_color);
+}
+
+.revierw .content .info .time{
+    margin-top: -5px;
+}

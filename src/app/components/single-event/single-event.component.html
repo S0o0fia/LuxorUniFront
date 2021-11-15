@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="single">
+  <div class="container">
+    <div class="content">
+      <div class="photo">
+        <img
+          [src]="
+            'https://universityqwer.000webhostapp.com/images/' + photo
+              | imagePipe: defualtImage
+          "
+          alt="No Phone Image"
+        />
+      </div>
+      <div class="date">{{ time | date: "medium"}}</div>
+      <p class="des">{{ des }}</p>
+    </div>
+  </div>
+</div>
+
+<app-scroll></app-scroll>
+
+<app-footer></app-footer>

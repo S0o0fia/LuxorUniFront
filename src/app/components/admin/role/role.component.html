@@ -1,0 +1,94 @@
+<div class="list-group">
+  <a
+    routerLink="/admin/admin-main"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    [hidden]="hidden_admin"
+  >
+    الرئيسية
+  </a>
+  <a
+    routerLink="/admin/admin-news"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    [hidden]="hidden_instructor || hidden_support_university"
+    >الاخبار</a
+  >
+
+  <a
+    routerLink="/admin/admin-magazine"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    [hidden]="hidden_instructor || hidden_support_university"
+    >المجلة</a
+  >
+
+  <a routerLink="/admin/admin-result" class="list-group-item list-group-item-action"
+  routerLinkActive="active" [hidden]="hidden_instructor || hidden_admin">النتائج</a>
+
+  <a
+    routerLink="/admin/admin-ticket"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    [hidden]="hidden_instructor || hidden_mediacenter_university || hidden_admin"
+    >استفسارات</a
+  >
+
+  <a
+    routerLink="/admin/admin-student"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    [hidden]="
+      hidden_instructor ||
+      hidden_mediacenter_university ||
+      hidden_support_university
+    "
+    >الطلاب</a
+  >
+
+  <a
+    routerLink="/admin/admin-employees"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    [hidden]="
+      hidden_instructor ||
+      hidden_mediacenter_university ||
+      hidden_support_university
+    "
+    >عاملين بالجامعة</a
+  >
+
+  <a
+    routerLink="/admin/exams"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    [hidden]="
+      hidden_instructor || hidden_mediacenter_university || hidden_admin
+    "
+    >جداول الامتحانات</a
+  >
+
+  <a
+    routerLink="/admin/lectures"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    [hidden]="
+      hidden_instructor || hidden_mediacenter_university || hidden_admin
+    "
+  >
+    جداول المحاضرات</a
+  >
+
+  <!-- <a routerLink="/admin/admin-chat" class="list-group-item list-group-item-action"
+    routerLinkActive="active" [hidden]="hidden_admin || hidden_instructor || hidden_mediacenter_university || hidden_support_university"> chat </a> -->
+
+  <a
+    routerLink="/academic-affairs/login"
+    class="list-group-item list-group-item-action"
+    routerLinkActive="active"
+    (click)="removeToken()"
+  >
+    خروج</a
+  >
+</div>

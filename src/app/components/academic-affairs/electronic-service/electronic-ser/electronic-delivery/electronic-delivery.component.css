@@ -1,0 +1,21 @@
+@import "../../../../../../assets/CSS/about/info-css/fixed.css";
+
+.system-message ol{
+    margin-right: 20px;
+}
+.system-message ol li{
+    margin-bottom: 8px;
+}
+.system-message ol li a{
+    color: #3f51b5; 
+}
+@media (max-width: 767px) { 
+    .system-message .message-title h2::after{
+        top: 70px;
+    }
+}
+@media (max-width: 376px) { 
+    .system-message .message-title h2::after{
+        top: 90px;
+    }
+}
